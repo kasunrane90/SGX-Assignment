@@ -51,7 +51,7 @@ export class SimpleFormComponent implements OnInit {
 	saveSimpleForm() {
 		this.isDataSaved = false;
 		const selectedFilesCount = this.selectedFiles && this.selectedFiles.length ? this.selectedFiles.length : 0
-		if(this.selectedFiles && selectedFilesCount > 0) {
+		if(this.selectedFiles && selectedFilesCount > 0) { // checks for whether any files selected or not
 			for(let i = 0; i < selectedFilesCount; i++) {
 				// image upload http request
 				this.simpleFormService.uploadImage(this.selectedFiles[i]).subscribe(
