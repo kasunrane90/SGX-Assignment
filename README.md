@@ -4,7 +4,7 @@ Test assignment for SGX
 
 Please follow below URL for the live demo
 
-DEMO - https://sgx-assignment-kasun.web.app/home
+DEMO - https://sgx-assignment-kasun.web.app
 
 ## Project setup
 ```
