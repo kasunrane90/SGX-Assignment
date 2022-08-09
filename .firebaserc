@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "sgx-assignment-kasun"
+  },
+  "targets": {
+    "sgx-assignment-kasun": {
+      "hosting": {
+        "SGX-Assignment": [
+          "sgx-assignment-kasun"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.main-wrapper {
+    width: 800px;
+    margin: 40px auto 60px;
+    .mat-card-title {
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .card-content-wrapper {
+        .row {
+            display: flex;
+            margin: 0 -10px;
+            .column-block {
+                padding: 0 10px;
+                width: 100%;
+                .mat-form-field {
+                    width: 100%;
+                    margin: 0 0 15px 0;
+                }
+                &.buttons-wrapper {
+                    text-align: right;
+                }
+                .image-uploader-btn {
+                    margin-right: 10px;
+                    position: relative;
+                    cursor: pointer;
+                    input {
+                        opacity: 0;
+                        position: absolute;
+                        z-index: 9999;
+                        right: 0;
+                        left: 0;
+                        top: 0;
+                        bottom: 0;
+                        cursor: pointer;
+                    }
+                }
+                .selected-images-wrapper {
+                    display: flex;
+                    flex-wrap: wrap;
+                    row-gap: 15px;
+                    margin-bottom: 20px;
+                    img {
+                        object-fit: cover;
+                        width: 48%;
+                        margin-bottom: 15px;
+                        &:nth-child(odd) {
+                            padding-right: 2%;
+                        }
+                        &:nth-child(even) {
+                            padding-left: 2%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
