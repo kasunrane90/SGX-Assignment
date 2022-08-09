@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/SGX-assignment",
+    "public": "dist/SGX-assesment",
     "ignore": [
       "firebase.json",
       "**/.*",
