@@ -2,7 +2,7 @@
 
 Test assignment for SGX
 
-Please follow [this](https://sgx-assignment-kasun.web.app/home) URL for the live demo
+Please follow below URL for the live demo
 
 DEMO - https://sgx-assignment-kasun.web.app/home
 
