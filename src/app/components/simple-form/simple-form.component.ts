@@ -36,7 +36,6 @@ export class SimpleFormComponent implements OnInit {
 
 	// function for trigger the the email
 	sendEmail() {
-		console.log(this.uploadedImageURLs.slice(0, -2))
 		const headers = new HttpHeaders({ "Content-Type": "application/json" });
 		this.http.post('https://formspree.io/f/mdojoove',
 			{ Name: `${this.simpleForm.value.fname} ${this.simpleForm.value.lname}`, Email: this.simpleForm.value.email, Description: this.simpleForm.value.desc, Attachments: this.uploadedImageURLs.slice(0, -2) },
