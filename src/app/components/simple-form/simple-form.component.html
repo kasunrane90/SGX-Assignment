@@ -1,0 +1,60 @@
+<app-loader *ngIf="!isDataSaved"></app-loader>
+<div class="main-wrapper">
+    <mat-card>
+        <mat-card-title>Simple Form</mat-card-title>
+        <div class="card-content-wrapper">
+            <form [formGroup]="simpleForm" (ngSubmit)="saveSimpleForm()">
+                <div class="row">
+                    <div class="column-block left">
+                        <mat-form-field appearance="outline">
+                            <mat-label>First Name</mat-label>
+                            <input matInput placeholder="First Name" formControlName="fname">
+                            <mat-error>First Name is required</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="column-block right">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Last Name</mat-label>
+                            <input matInput placeholder="Last Name" formControlName="lname">
+                            <mat-error>Last Name is required</mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column-block">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Small Description</mat-label>
+                            <textarea matInput placeholder="Small Description" formControlName="desc" rows="7"></textarea>
+                            <mat-error>Small Description is required</mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column-block">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Email Address</mat-label>
+                            <input matInput type="email" formControlName="email" placeholder="Email Address">
+                            <mat-error *ngIf="simpleForm.controls['email'].errors?.['required']">Email is required</mat-error>
+                            <mat-error *ngIf="simpleForm.controls['email'].errors?.['pattern']">Please enter valid email</mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column-block">
+                        <div class="selected-images-wrapper">
+                            <img *ngFor='let image of imagePreviews' [src]="image" class="preview">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column-block buttons-wrapper">
+                        <button mat-button class="image-uploader-btn"><mat-icon>add</mat-icon> Add image
+                            <input type="file" accept="image/*" multiple (change)="selectFiles($event)" value="Add Image"/>
+                        </button>
+                        <button mat-raised-button color="primary" type="submit" [disabled]="!simpleForm.valid">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </mat-card>
+</div>
