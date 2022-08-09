@@ -38,7 +38,7 @@ export class SimpleFormComponent implements OnInit {
 	sendEmail() {
 		const headers = new HttpHeaders({ "Content-Type": "application/json" });
 		this.http.post('https://formspree.io/f/mdojoove',
-			{ Name: `${this.simpleForm.value.fname} ${this.simpleForm.value.lname}`, Email: this.simpleForm.value.email, Description: this.simpleForm.value.desc, Attachments: this.uploadedImageURLs.slice(0, -2) },
+			{ Name: `${this.simpleForm.value.fname} ${this.simpleForm.value.lname}`, Email: this.simpleForm.value.email, Description: this.simpleForm.value.desc, Attachments: this.uploadedImageURLs },
 			{ headers: headers }
 		).subscribe(response => {
 			this.isDataSaved = true;
